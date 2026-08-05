@@ -1,0 +1,10 @@
+title: Agent Security Papers
+description: A curated collection of research papers on LLM agent security.
+theme: jekyll-theme-cayman
+show_downloads: false
+
+github:
+  repository_url: https://github.com/Emmanuelwh/agent-security-paper-summaries
+
+plugins:
+  - jekyll-seo-tag
