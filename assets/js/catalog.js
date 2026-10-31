@@ -299,12 +299,24 @@
     var quote = lead.nodes.filter(function (node) {
       return node.tagName === 'BLOCKQUOTE';
     })[0];
-    header.appendChild(element(
-      'p',
-      'hero-lede',
-      quote ? cleanText(quote) :
-        'A curated bibliography of research on the security and privacy of LLM-based agents.'
-    ));
+    var leadText = quote ? cleanText(quote) :
+      'A curated bibliography of research on the security and privacy of LLM-based agents.';
+    var leadSentences = leadText.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g) || [leadText];
+    var leadPrimary = leadSentences.slice(0, 2).join(' ').trim();
+    var leadSecondary = leadSentences.slice(2).join(' ').trim();
+    var intro = element('div', 'hero-intro' + (leadSecondary ? '' : ' hero-intro-single'));
+    var introMain = element('div', 'hero-intro-main');
+    introMain.appendChild(element('p', 'hero-intro-label', 'Mission'));
+    introMain.appendChild(element('p', 'hero-lede', leadPrimary));
+    intro.appendChild(introMain);
+
+    if (leadSecondary) {
+      var introSide = element('div', 'hero-intro-side');
+      introSide.appendChild(element('p', 'hero-intro-label', 'Scope & contributions'));
+      introSide.appendChild(element('p', 'hero-scope', leadSecondary));
+      intro.appendChild(introSide);
+    }
+    header.appendChild(intro);
 
     var meta = element('div', 'hero-meta');
     meta.appendChild(stat(uniquePapers.length, 'published papers'));

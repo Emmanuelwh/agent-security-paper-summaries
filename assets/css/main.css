@@ -161,17 +161,57 @@ button {
   color: var(--muted);
 }
 
+.hero-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(18rem, 0.85fr);
+  gap: 4rem;
+  margin-top: 2.25rem;
+  padding: 1.35rem 0 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.hero-intro-single {
+  grid-template-columns: minmax(0, 52rem);
+}
+
+.hero-intro-main,
+.hero-intro-side {
+  min-width: 0;
+}
+
+.hero-intro-side {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--rule);
+}
+
+.hero-intro-label {
+  margin: 0 0 0.6rem;
+  color: var(--teal);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .hero-lede {
-  max-width: 52rem;
-  margin: 2rem 0 0;
+  max-width: none;
+  margin: 0;
   font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.hero-scope {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
   line-height: 1.65;
 }
 
 .hero-meta {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 2.25rem;
+  margin-top: 0;
   border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--rule);
 }
@@ -734,6 +774,17 @@ a.paper-title:hover {
 
   .hero-title {
     font-size: 4rem;
+  }
+
+  .hero-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .hero-intro-side {
+    padding: 1.25rem 0 0;
+    border-top: 1px solid var(--rule);
+    border-left: 0;
   }
 
   .catalog-shell {
