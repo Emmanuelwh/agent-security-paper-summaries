@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-CC%20BY%204.0-2563a6.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-b33a3a.svg)](https://emmanuelwh.github.io/agent-security-paper-summaries/)
 
-> A curated bibliography of research on the security and privacy of LLM-based agents. The collection covers prompt injection, tool and action security, memory poisoning, privacy leakage, agent misuse, benchmarks, red teaming, and system-level defenses. Contributions and corrections are welcome.
+> We aim to systematically track agent-security research across security and software engineering conferences and journals. Because AI venues publish a much larger volume of papers, we collect relevant AI work as comprehensively as possible and continuously expand the bibliography. The collection covers prompt injection, tool and action security, memory poisoning, privacy leakage, agent misuse, benchmarks, red teaming, and system-level defenses. Contributions and corrections are welcome.
 
 ## Contents
 
@@ -85,11 +85,26 @@
 
 ### 2024
 
+#### ASE
+
+- [Exploring ChatGPT App Ecosystem: Distribution, Deployment and Security](https://doi.org/10.1145/3691620.3695510)
+
+#### IEEE TDSC
+
+- [PrivacyAsst: Safeguarding User Privacy in Tool-Using Large Language Model Agents](https://ieeexplore.ieee.org/abstract/document/10458329/)
+
 #### NeurIPS
 
 - [AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://proceedings.nips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html)
 - [PrivacyLens: Evaluating Privacy Norm Awareness of Language Models in Action](https://papers.nips.cc/paper_files/paper/2024/hash/a2a7e58309d5190082390ff10ff3b2b8-Abstract-Datasets_and_Benchmarks_Track.html)
 - [AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html)
+- [Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents](https://proceedings.neurips.cc/paper_files/paper/2024/hash/b6e9d6f4f3428cd5f3f9e9bbae2cab10-Abstract-Conference.html)
+- [Secret Collusion among AI Agents: Multi-Agent Deception via Steganography](https://proceedings.neurips.cc/paper_files/paper/2024/hash/861f7dad098aec1c3560fb7add468d41-Abstract-Conference.html)
+
+#### ICML
+
+- [Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast](https://proceedings.mlr.press/v235/gu24e.html)
+- [Feedback Loops With Language Models Drive In-Context Reward Hacking](https://proceedings.mlr.press/v235/pan24d.html)
 
 #### ICLR
 
@@ -167,6 +182,11 @@ Model-level, runtime, and architectural defenses that preserve user intent and c
 
 Unsafe tool selection, taint propagation, permission control, and action validation in tool-using agents.
 
+#### Plugins, APIs, and Agent Frameworks
+
+- [Exploring ChatGPT App Ecosystem: Distribution, Deployment and Security](https://doi.org/10.1145/3691620.3695510) (ASE '24)
+- [Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://proceedings.iclr.cc/paper_files/paper/2024/hash/7274ed909a312d4d869cc328ad1c5f04-Abstract-Conference.html) (ICLR '24)
+
 #### Tool Invocation and Taint
 
 - [Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu) (USENIX Security '25)
@@ -189,6 +209,7 @@ Attacks and defenses involving persistent memory, knowledge bases, private data,
 
 #### Privacy Leakage
 
+- [PrivacyAsst: Safeguarding User Privacy in Tool-Using Large Language Model Agents](https://ieeexplore.ieee.org/abstract/document/10458329/) (IEEE TDSC '24)
 - [PrivacyLens: Evaluating Privacy Norm Awareness of Language Models in Action](https://papers.nips.cc/paper_files/paper/2024/hash/a2a7e58309d5190082390ff10ff3b2b8-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '24)
 - [AgentDAM: Privacy Leakage Evaluation for Autonomous Web Agents](https://openreview.net/forum?id=SP0X5rm6f3) (NeurIPS '25)
 - [Privacy in Action: Towards Realistic Privacy Mitigation and Evaluation for LLM-Powered Agents](https://aclanthology.org/2025.findings-emnlp.925/) (EMNLP Findings '25)
@@ -203,6 +224,13 @@ Research on harmful task execution, offensive agents, automated red teaming, and
 - [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://openreview.net/forum?id=AC5n7xHuR1) (ICLR '25)
 - [Cloak, Honey, Trap: Proactive Defenses Against LLM Agents](https://www.usenix.org/conference/usenixsecurity25/presentation/ayzenshteyn) (USENIX Security '25)
 - [Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition](https://proceedings.neurips.cc/paper_files/paper/2025/hash/73368bc7644c054b5bcc6490a8f2fb1c-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '25)
+
+#### Jailbreaks, Backdoors, Collusion, and Reward Hacking
+
+- [Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast](https://proceedings.mlr.press/v235/gu24e.html) (ICML '24)
+- [Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents](https://proceedings.neurips.cc/paper_files/paper/2024/hash/b6e9d6f4f3428cd5f3f9e9bbae2cab10-Abstract-Conference.html) (NeurIPS '24)
+- [Secret Collusion among AI Agents: Multi-Agent Deception via Steganography](https://proceedings.neurips.cc/paper_files/paper/2024/hash/861f7dad098aec1c3560fb7add468d41-Abstract-Conference.html) (NeurIPS '24)
+- [Feedback Loops With Language Models Drive In-Context Reward Hacking](https://proceedings.mlr.press/v235/pan24d.html) (ICML '24)
 
 ---
 

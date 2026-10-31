@@ -602,8 +602,11 @@
     if (!href) return 'link';
     if (/aclanthology\.org/.test(href)) return 'ACL';
     if (/usenix\.org/.test(href)) return 'USENIX';
+    if (/ieeexplore\.ieee\.org/.test(href)) return 'IEEE';
+    if (/proceedings\.mlr\.press/.test(href)) return 'PMLR';
     if (/nips\.cc|neurips\.cc/.test(href)) return 'NeurIPS';
-    if (/iclr\.cc|openreview\.net/.test(href)) return 'OpenReview';
+    if (/proceedings\.iclr\.cc/.test(href)) return 'ICLR';
+    if (/openreview\.net/.test(href)) return 'OpenReview';
     if (/doi\.org/.test(href)) return 'DOI';
     if (/arxiv\.org/.test(href)) return 'arXiv';
     return 'paper';
