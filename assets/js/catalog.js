@@ -254,12 +254,16 @@
     var venue = venueHint || '';
     var year = yearHint || '';
     var meta = /\(([^()]*)\)\s*$/.exec(raw);
+    var status = '';
 
     if (meta) {
-      var parsed = /^(.+?)\s+['’](\d{2})$/.exec(meta[1].trim());
+      var parsed = /^(.+?)\s+['’](\d{2})(?:\s*[,;]\s*(.+))?$/.exec(meta[1].trim());
       if (parsed) {
         venue = venue || parsed[1].trim();
         year = year || '20' + parsed[2];
+        status = normaliseStatus(parsed[3]);
+      } else {
+        status = normaliseStatus(meta[1]);
       }
     }
 
@@ -268,6 +272,7 @@
       href: primary ? primary.getAttribute('href') : '',
       venue: normaliseVenue(venue),
       year: year,
+      status: status,
       source: sourceLabel(primary ? primary.getAttribute('href') : '')
     };
   }
@@ -530,6 +535,7 @@
             paper.title,
             paper.venue,
             paper.year,
+            paper.status,
             subgroup.label,
             group.label
           ].join(' ').toLowerCase()
@@ -554,6 +560,7 @@
     var metadata = element('span', 'paper-metadata');
     if (paper.venue) metadata.appendChild(element('span', 'paper-tag venue', paper.venue));
     if (paper.year) metadata.appendChild(element('span', 'paper-tag year', paper.year));
+    if (paper.status) metadata.appendChild(element('span', 'paper-tag status', paper.status));
     body.appendChild(metadata);
     row.appendChild(body);
     if (paper.href) {
@@ -617,6 +624,15 @@
       .replace(/\s+Findings$/i, '')
       .replace(/\s*['’]\d{2}\s*$/, '')
       .trim();
+  }
+
+  function normaliseStatus(status) {
+    var value = String(status || '').trim().toLowerCase();
+    if (value === 'poster') return 'Poster';
+    if (value === 'spotlight') return 'Spotlight';
+    if (value === 'oral') return 'Oral';
+    if (value === 'boundary case') return 'Boundary case';
+    return '';
   }
 
   function slug(value) {

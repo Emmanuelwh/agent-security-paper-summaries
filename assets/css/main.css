@@ -644,6 +644,11 @@ a.paper-title:hover {
   color: var(--teal);
 }
 
+.paper-tag.status {
+  border-color: color-mix(in srgb, var(--red) 45%, var(--rule));
+  color: var(--red);
+}
+
 .paper-source {
   color: var(--muted);
   font-family: var(--mono);
