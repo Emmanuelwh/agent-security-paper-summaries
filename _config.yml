@@ -1,10 +1,23 @@
-title: Agent Security Papers
-description: A curated collection of research papers on LLM agent security.
-theme: jekyll-theme-cayman
-show_downloads: false
+title: "Agent Security Research Papers"
+description: "A curated bibliography of research on the security and privacy of LLM-based agents"
+url: "https://emmanuelwh.github.io"
+baseurl: "/agent-security-paper-summaries"
+
+lang: en-US
+author: "Hao Wu"
 
 github:
-  repository_url: https://github.com/Emmanuelwh/agent-security-paper-summaries
+  is_project_page: true
+  repository_name: "agent-security-paper-summaries"
 
 plugins:
   - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - .gitignore
+  - LICENSE

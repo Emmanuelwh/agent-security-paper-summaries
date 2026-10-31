@@ -1,7 +1,233 @@
-# Agent Security Papers
+# Agent Security Research Papers
 
-This repository contains a GitHub Pages-ready collection of research papers on LLM agent security.
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-16836b.svg)](#contributing)
+[![License](https://img.shields.io/badge/license-CC%20BY%204.0-2563a6.svg)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-b33a3a.svg)](https://emmanuelwh.github.io/agent-security-paper-summaries/)
 
-The main page is in [`index.md`](index.md). It tracks papers about prompt injection, tool abuse, privacy leakage, agent backdoors, persistent control, harmful task execution, and defenses for tool-using LLM agents.
+> A curated bibliography of research on the security and privacy of LLM-based agents. The collection covers prompt injection, tool and action security, memory poisoning, privacy leakage, agent misuse, benchmarks, red teaming, and system-level defenses. Contributions and corrections are welcome.
 
-GitHub Pages URL: <https://emmanuelwh.github.io/agent-security-paper-summaries/>
+## Contents
+
+[2026](#2026) | [2025](#2025) | [2024](#2024)
+
+[Benchmarks and Evaluation](#benchmarks-and-evaluation) | [Prompt Injection Attacks](#prompt-injection-attacks) | [Defenses and Secure Design](#defenses-and-secure-design) | [Tool and Action Security](#tool-and-action-security) | [Memory, RAG, and Privacy](#memory-rag-and-privacy) | [Agent Misuse and Red Teaming](#agent-misuse-and-red-teaming) | [Preprints](#preprints)
+
+---
+
+## All Papers
+
+### 2026
+
+#### USENIX Security
+
+- [MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks](https://www.usenix.org/conference/usenixsecurity26/presentation/syros)
+- [AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations](https://www.usenix.org/conference/usenixsecurity26/presentation/he-yu)
+- [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan)
+- [FragFuse: Bypassing Access Control of Large Language Model Agents via Memory-Based Query Fragmentation and Fusion](https://www.usenix.org/conference/usenixsecurity26/presentation/rao)
+
+#### ACL
+
+- [VIGIL: Defending LLM Agents Against Tool-Stream Injection via Verify-Before-Commit](https://aclanthology.org/2026.acl-long.443/)
+- [ToolSafe: Enhancing Tool Invocation Safety of LLM-based Agents](https://aclanthology.org/2026.findings-acl.1850/)
+
+#### EMNLP
+
+- [LogicInception: Discourse-Level Indirect Prompt Injection via Causal Chain Construction](https://aclanthology.org/2026.emnlp-main.1831/)
+- [Will the User Ever Know? Covert Indirect Prompt Injection Attacks on Tool-Using LLM Agents](https://aclanthology.org/2026.emnlp-main.2035/)
+- [AdapTools: Adaptive Tool-based Indirect Prompt Injection Attacks on Agentic LLMs](https://aclanthology.org/2026.emnlp-main.2055/)
+- [RecoverAgent: Intent-Preserving Recovery from Indirect Prompt Injection in Tool-using LLM Agents](https://aclanthology.org/2026.findings-emnlp.830/)
+- [IterInject: Indirect Prompt Injection Against LLM Agents via Feedback-Guided Iterative Optimization](https://aclanthology.org/2026.findings-emnlp.808/)
+- [Agent Tools Orchestration Leaks More: Dataset, Benchmark, and Mitigation](https://aclanthology.org/2026.findings-emnlp.1293/)
+- [AgenTRIM: Tool Risk Mitigation for Agentic AI](https://aclanthology.org/2026.findings-emnlp.1102/)
+
+### 2025
+
+#### USENIX Security
+
+- [Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu)
+- [StruQ: Defending Against Prompt Injection with Structured Queries](https://www.usenix.org/conference/usenixsecurity25/presentation/chen-sizhe)
+- [Cloak, Honey, Trap: Proactive Defenses Against LLM Agents](https://www.usenix.org/conference/usenixsecurity25/presentation/ayzenshteyn)
+- [When LLMs Go Online: The Emerging Threat of Web-Enabled LLMs](https://www.usenix.org/conference/usenixsecurity25/presentation/kim-hanna)
+
+#### NeurIPS
+
+- [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://proceedings.nips.cc/paper_files/paper/2025/hash/1c9818387f5dd0a0bc151214660f059d-Abstract-Datasets_and_Benchmarks_Track.html)
+- [Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition](https://proceedings.neurips.cc/paper_files/paper/2025/hash/73368bc7644c054b5bcc6490a8f2fb1c-Abstract-Datasets_and_Benchmarks_Track.html)
+- [AgentDAM: Privacy Leakage Evaluation for Autonomous Web Agents](https://openreview.net/forum?id=SP0X5rm6f3)
+
+#### ICLR
+
+- [Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5750f91d8fb9d5c02bd8ad2c3b44456b-Abstract-Conference.html)
+- [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://openreview.net/forum?id=AC5n7xHuR1)
+
+#### KDD
+
+- [Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models](https://doi.org/10.1145/3690624.3709179)
+
+#### ACL
+
+- [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.acl-long.1435/)
+- [Can Indirect Prompt Injection Attacks Be Detected and Removed?](https://aclanthology.org/2025.acl-long.890/)
+
+#### NAACL
+
+- [Breaking ReAct Agents: Foot-in-the-Door Attack Will Get You In](https://aclanthology.org/2025.findings-naacl.363/)
+
+#### EMNLP
+
+- [AGENTVIGIL: Automatic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents](https://aclanthology.org/2025.findings-emnlp.1258/)
+- [IPIGuard: A Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.emnlp-main.53/)
+- [Privacy in Action: Towards Realistic Privacy Mitigation and Evaluation for LLM-Powered Agents](https://aclanthology.org/2025.findings-emnlp.925/)
+
+#### CCS
+
+- [SecAlign: Defending Against Prompt Injection with Preference Optimization](https://arxiv.org/abs/2410.05451)
+
+### 2024
+
+#### NeurIPS
+
+- [AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://proceedings.nips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html)
+- [PrivacyLens: Evaluating Privacy Norm Awareness of Language Models in Action](https://papers.nips.cc/paper_files/paper/2024/hash/a2a7e58309d5190082390ff10ff3b2b8-Abstract-Datasets_and_Benchmarks_Track.html)
+- [AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html)
+
+#### ICLR
+
+- [Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://proceedings.iclr.cc/paper_files/paper/2024/hash/7274ed909a312d4d869cc328ad1c5f04-Abstract-Conference.html)
+
+#### ACL
+
+- [InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents](https://aclanthology.org/2024.findings-acl.624/)
+
+#### USENIX Security
+
+- [Formalizing and Benchmarking Prompt Injection Attacks and Defenses](https://www.usenix.org/conference/usenixsecurity24/presentation/liu-yupei)
+
+---
+
+## Papers by Topic
+
+### Benchmarks and Evaluation
+
+Benchmarks, test environments, and empirical evaluations that measure agent security, harmful task completion, or deployment risk.
+
+#### General Agent Security
+
+- [Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5750f91d8fb9d5c02bd8ad2c3b44456b-Abstract-Conference.html) (ICLR '25)
+- [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://openreview.net/forum?id=AC5n7xHuR1) (ICLR '25)
+- [Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition](https://proceedings.neurips.cc/paper_files/paper/2025/hash/73368bc7644c054b5bcc6490a8f2fb1c-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '25)
+- [Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://proceedings.iclr.cc/paper_files/paper/2024/hash/7274ed909a312d4d869cc328ad1c5f04-Abstract-Conference.html) (ICLR '24)
+
+#### Prompt Injection Benchmarks
+
+- [AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://proceedings.nips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '24)
+- [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://proceedings.nips.cc/paper_files/paper/2025/hash/1c9818387f5dd0a0bc151214660f059d-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '25)
+- [InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents](https://aclanthology.org/2024.findings-acl.624/) (ACL Findings '24)
+- [Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models](https://doi.org/10.1145/3690624.3709179) (KDD '25)
+- [Formalizing and Benchmarking Prompt Injection Attacks and Defenses](https://www.usenix.org/conference/usenixsecurity24/presentation/liu-yupei) (USENIX Security '24)
+
+### Prompt Injection Attacks
+
+Attacks that place malicious instructions in external content, tool streams, retrieval corpora, or multi-step agent context.
+
+#### Indirect and Context-Aware Attacks
+
+- [MUZZLE: Adaptive Agentic Red-Teaming of Web Agents Against Indirect Prompt Injection Attacks](https://www.usenix.org/conference/usenixsecurity26/presentation/syros) (USENIX Security '26)
+- [AGENTVIGIL: Automatic Black-Box Red-teaming for Indirect Prompt Injection against LLM Agents](https://aclanthology.org/2025.findings-emnlp.1258/) (EMNLP Findings '25)
+- [Breaking ReAct Agents: Foot-in-the-Door Attack Will Get You In](https://aclanthology.org/2025.findings-naacl.363/) (NAACL Findings '25)
+- [IterInject: Indirect Prompt Injection Against LLM Agents via Feedback-Guided Iterative Optimization](https://aclanthology.org/2026.findings-emnlp.808/) (EMNLP Findings '26)
+- [LogicInception: Discourse-Level Indirect Prompt Injection via Causal Chain Construction](https://aclanthology.org/2026.emnlp-main.1831/) (EMNLP '26)
+- [Will the User Ever Know? Covert Indirect Prompt Injection Attacks on Tool-Using LLM Agents](https://aclanthology.org/2026.emnlp-main.2035/) (EMNLP '26)
+
+#### Retrieval and Tool-Stream Attacks
+
+- [Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](https://www.usenix.org/conference/usenixsecurity26/presentation/chang-hongyan) (USENIX Security '26)
+- [AdapTools: Adaptive Tool-based Indirect Prompt Injection Attacks on Agentic LLMs](https://aclanthology.org/2026.emnlp-main.2055/) (EMNLP '26)
+- [VIGIL: Defending LLM Agents Against Tool-Stream Injection via Verify-Before-Commit](https://aclanthology.org/2026.acl-long.443/) (ACL '26)
+
+### Defenses and Secure Design
+
+Model-level, runtime, and architectural defenses that preserve user intent and constrain agent actions.
+
+#### Instruction and Intent Defenses
+
+- [StruQ: Defending Against Prompt Injection with Structured Queries](https://www.usenix.org/conference/usenixsecurity25/presentation/chen-sizhe) (USENIX Security '25)
+- [SecAlign: Defending Against Prompt Injection with Preference Optimization](https://arxiv.org/abs/2410.05451) (CCS '25)
+- [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.acl-long.1435/) (ACL '25)
+- [Can Indirect Prompt Injection Attacks Be Detected and Removed?](https://aclanthology.org/2025.acl-long.890/) (ACL '25)
+
+#### Runtime and Graph-Based Defenses
+
+- [AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations](https://www.usenix.org/conference/usenixsecurity26/presentation/he-yu) (USENIX Security '26)
+- [IPIGuard: A Tool Dependency Graph-Based Defense Against Indirect Prompt Injection in LLM Agents](https://aclanthology.org/2025.emnlp-main.53/) (EMNLP '25)
+- [RecoverAgent: Intent-Preserving Recovery from Indirect Prompt Injection in Tool-using LLM Agents](https://aclanthology.org/2026.findings-emnlp.830/) (EMNLP Findings '26)
+- [AgenTRIM: Tool Risk Mitigation for Agentic AI](https://aclanthology.org/2026.findings-emnlp.1102/) (EMNLP Findings '26)
+
+### Tool and Action Security
+
+Unsafe tool selection, taint propagation, permission control, and action validation in tool-using agents.
+
+#### Tool Invocation and Taint
+
+- [Make Agent Defeat Agent: Automatic Detection of Taint-Style Vulnerabilities in LLM-based Agents](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu) (USENIX Security '25)
+- [ToolSafe: Enhancing Tool Invocation Safety of LLM-based Agents](https://aclanthology.org/2026.findings-acl.1850/) (ACL Findings '26)
+- [VIGIL: Defending LLM Agents Against Tool-Stream Injection via Verify-Before-Commit](https://aclanthology.org/2026.acl-long.443/) (ACL '26)
+
+#### Web and Environment Interaction
+
+- [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://proceedings.nips.cc/paper_files/paper/2025/hash/1c9818387f5dd0a0bc151214660f059d-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '25)
+- [When LLMs Go Online: The Emerging Threat of Web-Enabled LLMs](https://www.usenix.org/conference/usenixsecurity25/presentation/kim-hanna) (USENIX Security '25)
+
+### Memory, RAG, and Privacy
+
+Attacks and defenses involving persistent memory, knowledge bases, private data, or cross-tool information flows.
+
+#### Memory and Knowledge-Base Poisoning
+
+- [AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://proceedings.neurips.cc/paper_files/paper/2024/hash/eb113910e9c3f6242541c1652e30dfd6-Abstract-Conference.html) (NeurIPS '24)
+- [FragFuse: Bypassing Access Control of Large Language Model Agents via Memory-Based Query Fragmentation and Fusion](https://www.usenix.org/conference/usenixsecurity26/presentation/rao) (USENIX Security '26)
+
+#### Privacy Leakage
+
+- [PrivacyLens: Evaluating Privacy Norm Awareness of Language Models in Action](https://papers.nips.cc/paper_files/paper/2024/hash/a2a7e58309d5190082390ff10ff3b2b8-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '24)
+- [AgentDAM: Privacy Leakage Evaluation for Autonomous Web Agents](https://openreview.net/forum?id=SP0X5rm6f3) (NeurIPS '25)
+- [Privacy in Action: Towards Realistic Privacy Mitigation and Evaluation for LLM-Powered Agents](https://aclanthology.org/2025.findings-emnlp.925/) (EMNLP Findings '25)
+- [Agent Tools Orchestration Leaks More: Dataset, Benchmark, and Mitigation](https://aclanthology.org/2026.findings-emnlp.1293/) (EMNLP Findings '26)
+
+### Agent Misuse and Red Teaming
+
+Research on harmful task execution, offensive agents, automated red teaming, and defenses against malicious agents.
+
+#### Harmful and Offensive Agents
+
+- [AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://openreview.net/forum?id=AC5n7xHuR1) (ICLR '25)
+- [Cloak, Honey, Trap: Proactive Defenses Against LLM Agents](https://www.usenix.org/conference/usenixsecurity25/presentation/ayzenshteyn) (USENIX Security '25)
+- [Security Challenges in AI Agent Deployment: Insights from a Large Scale Public Competition](https://proceedings.neurips.cc/paper_files/paper/2025/hash/73368bc7644c054b5bcc6490a8f2fb1c-Abstract-Datasets_and_Benchmarks_Track.html) (NeurIPS '25)
+
+---
+
+## Preprints
+
+- [Defeating Prompt Injections by Design (CaMeL)](https://arxiv.org/abs/2503.18813)
+- [CommandSans: Securing AI Agents with Surgical Precision Prompt Sanitization](https://arxiv.org/abs/2510.08829)
+- [ToolTweak: An Attack on Tool Selection in LLM-based Agents](https://openreview.net/forum?id=dQXa5jvpQN)
+- [Simple Prompt Injection Attacks Can Leak Personal Data Observed by LLM Agents During Task Execution](https://arxiv.org/abs/2506.01055)
+
+---
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request to:
+
+- add a missing paper;
+- correct a title, year, venue, or link;
+- improve the topic taxonomy;
+- suggest a new agent-security research direction.
+
+Use the following entry format and prefer an official proceedings, publisher, ACL Anthology, OpenReview, or arXiv link:
+
+    - [Paper Title](official-paper-url)
+
+## License
+
+The organization and documentation in this repository are licensed under [CC BY 4.0](LICENSE). Individual papers remain copyrighted by their authors and publishers.
